@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [website](https://louischen15.github.io/parallel-robot-catching-pages/).
 
-If you find Nerfies useful for your work please cite:
+If you find my work useful for your work please cite:
 ```
 
 ```

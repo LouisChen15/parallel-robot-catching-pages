@@ -103,24 +103,12 @@ Redundant Parallel Robot">
 </section>
 
 <section class="section">
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src=""
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-
   <div class="container is-max-desktop">
+
+
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -137,6 +125,75 @@ Redundant Parallel Robot">
     </div>
     <!--/ Abstract. -->
 
+    <!-- Testing. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Testing Videos</h2>
+
+        <!-- PPAC. -->
+        <h3 class="title is-4">PPAC (proposed)</h3>
+        <div class="content has-text-justified">
+          <p>
+            The video shows a testing case with a success rate of 0.65, and median impact reduction indicator of 0.5. 
+            The end effector can be observed matching object falling direction and velocity to reduce the relative velocity upon impact.
+          </p>
+        </div>
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/impact_curriculum3_0.65_0.5.mp4"
+                      type="video/mp4">
+            </video>
+            <!-- <h2 class="subtitle has-text-centered">
+              turns selfie videos from your phone into
+              free-viewpoint
+              portraits.
+            </h2> -->
+          </div>
+        </div>
+        <br/>
+        <!--/ PPAC. -->
+
+        <!-- Baseline. -->
+        <h3 class="title is-4">Baseline</h3>
+        <div class="container is-max-desktop">
+          <p>
+            The video shows a testing case with a success rate of 0.42, and median impact reduction indicator of 0.0.
+          </p>
+        </div>
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/baseline_0.4_0.mp4"
+                      type="video/mp4">
+            </video>
+            <!-- <h2 class="subtitle has-text-centered">
+              <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+              free-viewpoint
+              portraits.
+            </h2> -->
+          </div>
+        </div>
+        <!--/ Baseline. -->
+
+      </div>
+    </div>
+    <!--/ Testing. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src=""
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+
+  </div>
 </section>
 
 
@@ -172,7 +229,13 @@ Redundant Parallel Robot">
           <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            Commons Attribution-ShareAlike 4.0 International License</a>. 
+          </p>
+          
+          <p>
+            Website template borrowed from 
+            <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> 
+            made by the amazing <a href="https://keunhong.com/">Keunhong Park</a>.
           </p>
         </div>
       </div>
