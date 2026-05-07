@@ -27,6 +27,42 @@ Redundant Parallel Robot">
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    /* Center all titles */
+    .title {
+      text-align: center;
+    }
+
+    /* Make videos fill columns nicely */
+    video {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* Wider rows and cleaner spacing */
+    .columns {
+      width: 100%;
+    }
+
+    /* Better spacing between two-column videos */
+    .columns.is-variable {
+      --columnGap: 1.5rem;
+    }
+
+    .paper-video {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .video-container {
+      padding-top: 0;
+      padding-bottom: 25px;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -111,28 +147,35 @@ Redundant Parallel Robot">
 <section class="section">
   <div class="container is-max-desktop">
 
-
     <!-- Abstract. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Paper Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We 
+            Dynamic robotic catching of free-flying objects is challenging due to the need for precise timing, coordination, and safe impact mitigation, particularly when handling heavy objects. 
+            In this work, we investigate reinforcement learning–based dynamic object catching using a kinematically redundant parallel manipulator and explicitly address impact reduction at contact. 
+            We propose Parallel Performance-Adaptive Curricula (PPAC), a curriculum learning framework that adapts task difficulty along two complementary axes: end-effector initialization and post-contact interaction duration. 
+            This parallel curriculum structure enables stable training under sparse rewards while jointly optimizing two task objectives. 
+            To evaluate contact safety in a learning-based setting, we introduce an impact reduction indicator that measures relative-velocity reduction at contact and is invariant to object properties. 
+            Using PPO with an asymmetric actor–critic architecture, we train a policy to catch a free falling object of substantial size and mass (18 × 12 × 12 cm, 2.0 kg). 
+            In simulation, the proposed method achieves a 70% catching success rate and a 45% average impact reduction. 
+            The learned policy transfers successfully to a real Gosselin Platform without additional tuning.
           </p>
-          <p>
-            Our 
-          </p>
-          <p>
-            We 
-          </p>
+
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
     <!-- Testing. -->
-    <div class="columns is-centered">
+    <div class="columns is-centered ">
       <div class="column is-full-width">
         <h2 class="title is-3">Testing Videos</h2>
 
@@ -146,8 +189,8 @@ Redundant Parallel Robot">
           </p>
         </div>
         <div class="container is-max-desktop">
-          <div class="hero-body">
-            <video id="teaser" autoplay muted loop playsinline height="100%">
+          <div class="video-container">
+            <video id="teaser" controls autoplay muted loop playsinline height="100%">
               <source src="./static/videos/impact_curriculum3_0.65_0.5.mp4"
                       type="video/mp4">
             </video>
@@ -158,7 +201,6 @@ Redundant Parallel Robot">
             </h2> -->
           </div>
         </div>
-        <br/>
         <!--/ PPAC. -->
 
         <!-- Baseline. -->
@@ -169,8 +211,8 @@ Redundant Parallel Robot">
           </p>
         </div>
         <div class="container is-max-desktop">
-          <div class="hero-body">
-            <video id="teaser" autoplay muted loop playsinline height="100%">
+          <div class="video-container">
+            <video id="teaser" controls autoplay muted loop playsinline height="100%">
               <source src="./static/videos/baseline_0.4_0.mp4"
                       type="video/mp4">
             </video>
@@ -187,18 +229,154 @@ Redundant Parallel Robot">
     </div>
     <!--/ Testing. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Video</h2>
-          <div class="publication-video">
-            <iframe src=""
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <!-- Sim-to-Real video. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Sim-to-Real Videos</h2>
+
+        <!-- Success cases. -->
+        <h3 class="title is-4">Success Cases</h3>
+
+        <div class="columns is-variable is-4">
+          
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/success_case_neg_x.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/success_case_neg_y.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+
+        <div class="columns is-variable is-4">
+          
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/success_case_pos_x.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/success_case_quat_1.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+
+        <div class="columns is-variable is-4">
+          
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/success_case_quat_2.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/success_case_quat_3.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+        <!--/ Success cases. -->
+
+        <!-- Failure cases. -->
+        <h3 class="title is-4">Failure Cases</h3>
+
+        <div class="columns is-variable is-4">
+          
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/failure_case_bounce_off.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/failure_case_too_near.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/failure_case_singularity.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+        <!--/ Failure cases. -->
+
+        <!-- Impact reduction cases. -->
+        <h3 class="title is-4">Impact Reduction Cases</h3>
+
+        <div class="columns is-variable is-4">
+          
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column">
+            <video controls autoplay loop muted playsinline class="paper-video">
+              <source src="./static/videos/.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+        <!--/ Impact reduction cases. -->
+
+      </div>
+    </div>
+    <!--/ Sim-to-Real video. -->
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Hardware. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Hardware</h2>
+
+        <!-- Object. -->
+        <h3 class="title is-4">Object</h3>
+        <div class="container is-max-desktop">
+          <p>
+            The object is a pile of mini beanbags wrapped in red fabric and transparent packaging tape. 
+            It weighs 2.0 kg. The dimensions of the object are approximately 18 cm × 12 cm × 12 cm, matching the size of the object in the simulation.
+          </p>
+        </div>
+
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <img
+              id="object"
+              src="./static/images/object_weight.jpg"
+              alt="Object used in the catching experiment"
+              style="width: 75%; height: auto; display: block; margin: 0 auto;"
+            >
           </div>
         </div>
+        <!--/ Object. -->
+
       </div>
-      <!--/ Paper video. -->
     </div>
+    <!--/ Hardware. -->
 
   </div>
 </section>
